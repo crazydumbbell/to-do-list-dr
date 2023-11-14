@@ -8,6 +8,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/:id" element={<Detail />} />
+        {/* 경로와 컴포넌트 순으로 작성 근데 :id로 동적라우팅 할수도 있음 */}
       </Routes>
     </BrowserRouter>
   );

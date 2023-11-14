@@ -12,8 +12,9 @@ const CreateTodo = ({ todos, getTodos, lastTodoId }) => {
       ...todos,
       { id: lastTodoId + 1, title: newTodo, isDone: false },
     ];
-    //  ...은 전개구문 기존 ...todos에 새로운것을 넣고 배열로 감싸기
+    //  ...은 전개구문 기존 ...todos에 새로운배열을 넣은것 앞에 ...이 큰배열이고 {}가 추가된 작은 배열
     // 그 새로운게 {}안에 들어있는거임...
+    // 불린형 함수는 앞에 is가 붙는게 특징
     localStorage.setItem("todos", JSON.stringify(newTodos));
     // setItem은 로컬스토리지에 값을 담을때
     // getItem은 로컬스토리지로부터 값을 불러올때
@@ -26,7 +27,7 @@ const CreateTodo = ({ todos, getTodos, lastTodoId }) => {
 
   return (
     <form
-      className="bg-purple-200 w-96 mx-auto mt-12 flex "
+      className="w-96 mx-auto mt-12 flex "
       onSubmit={onSubmitNewTodo}
       //   위에 저장한onSubmitNewTodo값을 onSubmit에 담기
     >
