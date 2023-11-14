@@ -37,7 +37,7 @@ const Main = () => {
   return (
     <main className="min-h-screen max-w-screen-md mx-auto">
       <h1 className="text-center text-4xl font-bold h-[136px] flex justify-center items-center">
-        To do list
+        두두 리스트
       </h1>
       <CreateTodo todos={todos} getTodos={getTodos} lastTodoId={lastTodoId} />
       {/* 프롭스로 위의 todos를 내려받은 작업 앞의값은 key 뒤는 value value는 위의 useState의 todos를 가져온거고 
